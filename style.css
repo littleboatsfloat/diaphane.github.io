@@ -1,48 +1,381 @@
+/* --------------------------------
+   LITTLEBOATSFLOAT
+-------------------------------- */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    background: #111;
-    color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+
+html {
+    scroll-behavior: smooth;
 }
 
+
+body {
+    background: #f3f0e7;
+    color: #181818;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    padding: 0 28px;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* --------------------------------
+   HEADER
+-------------------------------- */
+
 header {
-    min-height: 70vh;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #222;
+
+    font-size: 14px;
+}
+
+
+.site-name {
+    font-style: italic;
+}
+
+
+.tiny-mark {
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+
+
+/* --------------------------------
+   WELCOME
+-------------------------------- */
+
+.welcome {
+    min-height: 63vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
+
+    position: relative;
 }
+
+
+.small-text {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 0.25em;
+
+    margin-bottom: 28px;
+}
+
 
 h1 {
-    font-size: 4rem;
-    letter-spacing: 8px;
+    font-weight: normal;
+
+    font-size: clamp(62px, 12vw, 175px);
+
+    line-height: 0.85;
+
+    letter-spacing: -0.07em;
+
+    margin-left: -6px;
 }
 
-header p {
-    margin-top: 15px;
-    color: #aaa;
+
+.scribble {
+    font-size: 25px;
+    letter-spacing: 7px;
+
+    margin-top: 25px;
+
+    transform: rotate(-1deg);
 }
 
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 30px;
+
+.intro {
+    width: 300px;
+
+    font-size: 17px;
+    line-height: 1.3;
+
+    margin-top: 35px;
+
+    font-style: italic;
 }
 
-h2 {
-    margin-bottom: 20px;
+
+
+/* --------------------------------
+   CATEGORY GRID
+-------------------------------- */
+
+.categories {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 80px 35px;
+
+    padding-bottom: 130px;
 }
+
+
+
+/* --------------------------------
+   CATEGORY
+-------------------------------- */
+
+.category-card {
+    display: block;
+
+    position: relative;
+}
+
+
+.drawing {
+    height: 360px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #222;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* deliberately imperfect */
+
+.card-one .drawing {
+    border-radius:
+        47% 53% 45% 55%
+        / 4% 6% 5% 7%;
+}
+
+
+.card-two .drawing {
+    border-radius:
+        3% 5% 4% 2%
+        / 5% 3% 6% 4%;
+
+    transform: rotate(0.4deg);
+}
+
+
+.card-three .drawing {
+    border-radius:
+        5% 3% 5% 2%
+        / 4% 7% 3% 6%;
+
+    transform: rotate(-0.25deg);
+}
+
+
+.card-four .drawing {
+    border-radius:
+        2% 4% 3% 6%
+        / 5% 3% 5% 3%;
+
+    transform: rotate(0.3deg);
+}
+
+
+
+/* --------------------------------
+   SVG DRAWINGS
+-------------------------------- */
+
+svg {
+    width: 72%;
+    height: 72%;
+
+    overflow: visible;
+}
+
+
+svg path,
+svg circle,
+svg line {
+    fill: none;
+
+    stroke: #171717;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+
+/* --------------------------------
+   LABELS
+-------------------------------- */
+
+.category-label {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+
+    border-top: 1px solid #222;
+
+    margin-top: 12px;
+    padding-top: 11px;
+}
+
+
+.category-label span {
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+}
+
+
+.category-label h2 {
+    font-size: 34px;
+
+    font-weight: normal;
+
+    font-style: italic;
+
+    letter-spacing: -0.03em;
+}
+
+
+.category-card p {
+    margin-top: 10px;
+    margin-left: 35px;
+
+    max-width: 320px;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+}
+
+
+
+/* --------------------------------
+   HOVER
+-------------------------------- */
+
+.category-card:hover .drawing {
+    background: #e9e4d8;
+
+    transform:
+        rotate(-0.6deg)
+        translateY(-5px);
+}
+
+
+.category-card:hover h2 {
+    text-decoration: underline;
+
+    text-decoration-thickness: 1px;
+
+    text-underline-offset: 5px;
+}
+
+
+
+/* --------------------------------
+   FOOTER
+-------------------------------- */
 
 footer {
-    text-align: center;
-    padding: 40px;
-    color: #777;
+    border-top: 1px solid #222;
+
+    min-height: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-top: 18px;
+
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 0 16px;
+    }
+
+
+    header {
+        height: 60px;
+    }
+
+
+    .welcome {
+        min-height: 58vh;
+    }
+
+
+    h1 {
+        font-size: 20vw;
+    }
+
+
+    .intro {
+        width: 85%;
+    }
+
+
+    .categories {
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+
+        padding-bottom: 90px;
+    }
+
+
+    .drawing {
+        height: 280px;
+    }
+
+
+    .category-label h2 {
+        font-size: 31px;
+    }
+
+
+    footer {
+        min-height: 90px;
+    }
+
 }
