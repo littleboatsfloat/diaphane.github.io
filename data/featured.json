@@ -1,0 +1,53 @@
+{
+  "books": {
+    "subtitle": "Books I return to",
+    "ids": [
+      "book-1909460",
+      "book-24971",
+      "book-5113",
+      "book-415",
+      "book-13082431",
+      "book-46114",
+      "book-7437",
+      "book-6749",
+      "book-118317"
+    ],
+    "attribution": "Anne Carson, Eros the Bittersweet",
+    "quote": "A meaning spins, remaining upright on an axis of normalcy aligned with the conventions of connotation and denotation, and yet: to spin is not normal, and to dissemble normal uprightness by means of this fantastic motion is impertinent. What is the relation of impertinence to the hope of understanding? To delight? The story concerns the reason why we love to fall in love. Beauty spins and the mind moves. To catch beauty would be to understand how that impertinent stability in vertigo is possible. But no, delight need not reach so far. To be running breathlessly, but not yet arrived, is itself delightful, a suspended moment of living hope. Suppression of impertinence is not the lover’s aim. Nor can I believe this philosopher really runs after understanding. Rather, he has become a philosopher (that is, one whose profession is to delight in understanding) in order to furnish himself with pretexts for running after tops."
+  },
+  "films": {
+    "subtitle": "Films that stay with me",
+    "ids": [
+      "film-10",
+      "film-06",
+      "film-35",
+      "film-05",
+      "film-09",
+      "film-18"
+    ],
+    "attribution": "Herman Blume, Rushmore",
+    "quote": "You guys have it real easy. I never had it like this where I grew up. But I send my kids here because the fact is you go to one of the best schools in the country: Rushmore. Now, for some of you it doesn't matter. You were born rich and you're going to stay rich. But here's my advice to the rest of you: Take dead aim on the rich boys. Get them in the crosshairs and take them down. Just remember, they can buy anything but they can't buy backbone. Don't let them forget it. Thank you."
+  },
+  "records": {
+    "subtitle": "Records I keep coming back to",
+    "ids": [
+      "record-102",
+      "record-111",
+      "record-053",
+      "record-063",
+      "record-072",
+      "record-069",
+      "record-088",
+      "record-004",
+      "record-008",
+      "record-016",
+      "record-122",
+      "record-050",
+      "record-047",
+      "record-044",
+      "record-065"
+    ],
+    "attribution": "Nick Drake, Fruit Tree",
+    "quote": "Life is but a memory, happened long ago\nTheatre full of sadness for a long forgotten show\nSeems so easy just to let it go on by\n‘Til you stop and wonder why you never wondered why"
+  }
+}
