@@ -66,59 +66,214 @@ for (const image of document.querySelectorAll('.cover-frame img, .detail-cover')
   }, { once:true });
 }
 
-// The figures travel in diagonal currents, turning beyond the left viewport edge.
+// Every journey begins at the same threshold. At shared junctions the figures
+// choose another connected segment, keeping their feet on the current.
 const travellers = [...document.querySelectorAll('.travelling-figure')];
 const basinPieces = [...document.querySelectorAll('.basin-piece')];
 const water = document.querySelector('.sloshing-water');
 const distortion = document.querySelector('#water-distortion feDisplacementMap');
 const ripples = [...document.querySelectorAll('.basin-ripples ellipse')];
-const routes = [...document.querySelectorAll('.network-lines path')];
-let routeLengths = routes.map(path => path.getTotalLength());
+const routes = new Map([...document.querySelectorAll('.network-lines path')].map(path => [
+  path.id.replace('flow-', ''), {
+    path, length:path.getTotalLength(), next:path.dataset.next.split(' ').filter(Boolean)
+  }
+]));
 const surfaceCurrents = [...document.querySelectorAll('.surface-currents path')];
 const smokePuffs = [...document.querySelectorAll('.smoke-puff')];
+const doorLeft = document.querySelector('.door-left');
+const doorRight = document.querySelector('.door-right');
+const walkers = travellers.map((node,i) => ({
+  node, pose:node.querySelector('.runner-pose'),
+  left:node.querySelector('.left-leg'), right:node.querySelector('.right-leg'),
+  edge:'threshold', distance:0, wait:.9+i*4.2, visits:0, journeys:0, stride:i*1.7, routeBias:0, cooldown:0, coupled:false
+}));
+let doorOpening = .15;
+function advanceWalker(walker, distance, i) {
+  walker.distance += distance;
+  let edge = routes.get(walker.edge);
+  while (walker.distance >= edge.length) {
+    walker.distance -= edge.length;
+    if (!edge.next.length) {
+      walker.edge = 'threshold'; walker.distance = 0;
+      walker.wait = 2.5 + i*.35; walker.visits = 0; walker.journeys++;
+      return;
+    }
+    const choice = (i + walker.journeys + walker.routeBias + walker.visits++) % edge.next.length;
+    walker.edge = edge.next[choice];
+    edge = routes.get(walker.edge);
+  }
+}
+function drawWalker(walker,i,time) {
+  const edge = routes.get(walker.edge);
+  const point = edge.path.getPointAtLength(walker.distance);
+  const ahead = edge.path.getPointAtLength(Math.min(edge.length,walker.distance+3));
+  const behind = edge.path.getPointAtLength(Math.max(0,walker.distance-3));
+  const dx = ahead.x-behind.x, dy = ahead.y-behind.y;
+  const direction = dx < 0 ? -1 : 1;
+  const slope = Math.max(-18,Math.min(18,Math.atan2(dy,Math.abs(dx))*180/Math.PI));
+  const entrance = walker.edge === 'threshold' ? Math.min(1,walker.distance/52) : 1;
+  const size = .2 + entrance*.43;
+  const gait = Math.sin(time*8.8+walker.stride);
+  const lift = Math.abs(gait)*1.1*entrance;
+  const exit = edge.next.length ? 1 : Math.min(1,(edge.length-walker.distance)/35);
+  walker.node.setAttribute('transform',`translate(${point.x} ${point.y-lift}) rotate(${slope*direction*.45}) scale(${size})`);
+  walker.node.setAttribute('opacity',walker.wait > 0 ? '0' : String(exit*.88));
+  walker.pose.setAttribute('transform',`skewX(${direction*(-5+gait*1.5)*entrance})`);
+  walker.left.setAttribute('transform',`rotate(${gait*15*entrance} -5 -35)`);
+  walker.right.setAttribute('transform',`rotate(${-gait*15*entrance} 5 -35)`);
+}
+// A machine's output becomes another's input. The current crosses a changing
+// chain of moving figures, then forks into the basin and beyond the page.
+const couplingLayer = document.querySelector('.coupling-layer');
 const network = document.querySelector('.figure-network');
-const factory = document.querySelector('.factory-scene');
-function measureConnections() {
-  if (!network || !factory) return;
-  const n = network.getBoundingClientRect(), f = factory.getBoundingClientRect();
-  const scale = n.width / 600;
-  const compact = window.matchMedia('(max-width: 550px)').matches;
-  const doorX = compact ? 350 : (f.left + f.width * .343 - n.left) / scale;
-  const doorY = compact ? 640 : (f.top + f.height * .9 - n.top) / scale;
-  // Shared couplings split, loop, and meet again; no single privileged outlet.
-  const inlet = `M${doorX} ${doorY} C${doorX-75} ${doorY-100} 470 560 350 470`;
-  const secondInlet = `M${doorX+48} ${doorY-20} C${doorX+140} ${doorY-210} 535 495 350 470`;
-  const branches = [
-    `${inlet} C210 448 330 315 205 290 C105 270 158 166 58 135 S-90 175 -250 80`,
-    `${inlet} C405 410 462 320 360 245 C250 165 165 225 205 290 C260 385 76 403 -245 355`,
-    `${secondInlet} C235 540 104 488 145 415 C196 330 300 405 205 290 C85 177 -30 250 -250 220`,
-    `${secondInlet} C425 395 365 352 290 390 C170 450 135 328 205 290 C278 250 332 132 220 103 S45 110 -230 35`,
-    `M205 290 C100 327 113 409 145 415 C210 450 325 456 350 470 C450 512 489 580 406 607 S193 558 145 415`,
-    `M350 470 C408 422 420 299 360 245 C295 185 361 120 408 158 C471 211 296 365 205 290`
-  ];
-  routes.forEach((path,i) => path.setAttribute('d', branches[i]));
-  routeLengths = routes.map(path => path.getTotalLength());
+const walkerPoint = w => routes.get(w.edge).path.getPointAtLength(w.distance);
+const svgNode = (tag,attributes,parent=couplingLayer) => {
+  const node = document.createElementNS('http://www.w3.org/2000/svg',tag);
+  Object.entries(attributes).forEach(([key,value]) => node.setAttribute(key,value));
+  parent.append(node); return node;
+};
+const streamColors = ['#ac743c','#7b8561','#ae6548','#687f79'];
+let chain = [], chainLinks = [], packets = [], flights = [], nextPacket = 0;
+let basinArrival = -100, outlets = null;
+if (couplingLayer) couplingLayer.replaceChildren();
+function measureOutlets() {
+  if (!network || !water) return;
+  const inverse = network.getScreenCTM()?.inverse();
+  const basinMatrix = document.querySelector('.basin-water').getScreenCTM();
+  if (!inverse || !basinMatrix) return;
+  const basin = new DOMPoint(875,572).matrixTransform(basinMatrix).matrixTransform(inverse);
+  const edge = new DOMPoint(innerWidth+65,document.querySelector('.basin-opening').getBoundingClientRect().bottom+35).matrixTransform(inverse);
+  outlets = {basin,edge};
 }
 if (network) {
-  new ResizeObserver(measureConnections).observe(document.querySelector('main'));
-  window.addEventListener('resize',measureConnections);
-  measureConnections();
+  new ResizeObserver(measureOutlets).observe(document.querySelector('main'));
+  window.addEventListener('resize',measureOutlets);
+  document.fonts.ready.then(measureOutlets);
+  measureOutlets();
 }
-let lastFrame = 0, flowTime = 0;
+function releaseCurrent(point,color,time) {
+  if (!outlets || flights.length > 22) return;
+  for (const target of ['basin','edge']) {
+    const end = outlets[target];
+    const d = target === 'basin'
+      ? `M${point.x} ${point.y} C${point.x-150} ${point.y-170} ${end.x-180} ${end.y+150} ${end.x} ${end.y}`
+      : `M${point.x} ${point.y} C${point.x+220} ${point.y-220} ${end.x-260} ${end.y-170} ${end.x} ${end.y}`;
+    const group = svgNode('g',{'class':'escaped-current'});
+    const path = svgNode('path',{d,'class':'flight-thread',stroke:color},group);
+    const tail = svgNode('path',{'class':'flight-tail',stroke:color},group);
+    const dot = svgNode('circle',{r:target==='basin'?3:2.2,fill:color,'class':'stream-packet'},group);
+    flights.push({group,path,tail,dot,target,length:path.getTotalLength(),distance:0,born:time});
+  }
+}
+function rebuildChain(time) {
+  const candidates = walkers.filter(w => {
+    const p=walkerPoint(w);
+    return !w.wait && w.edge!=='threshold' && p.x>20 && p.y>120;
+  });
+  const old = chain;
+  // Keep existing couplings until a machine leaves; new machines extend the chain.
+  const members = old.filter(w=>candidates.includes(w));
+  const additions = candidates.filter(w=>!members.includes(w)).sort(()=>Math.random()-.5);
+  for (const w of additions) if (members.length<6) members.push(w);
+  if (members.length<3) {
+    if (!old.length) return;
+    members.length=0;
+  }
+  if (members.length===old.length && members.every((w,i)=>w===old[i])) return;
+  // In-flight material is released, rather than destroyed by a changed coupling.
+  for (const packet of packets) {
+    if (packet.point) releaseCurrent(packet.point,streamColors[packet.hop%4],time);
+    packet.node.remove();
+  }
+  packets=[];
+  chainLinks.forEach(link=>link.path.remove()); chainLinks=[];
+  old.forEach(w=>{w.coupled=false;w.node.classList.remove('is-coupled');w.node.style.removeProperty('--coupling-glow');});
+  chain=members;
+  if (!chain.length) return;
+  // Spatial order follows the current upward, with crossings as bodies keep moving.
+  chain.sort((a,b)=>walkerPoint(b).y-walkerPoint(a).y);
+  chain.forEach(w=>{w.coupled=true;w.node.classList.add('is-coupled');});
+  for(let i=0;i<chain.length;i++) chainLinks.push({path:svgNode('path',{'class':'machine-current',stroke:streamColors[i%4]}),length:0});
+  nextPacket=Math.min(nextPacket,time+.3);
+}
+function drawChains(time,elapsed,moving) {
+  if (!couplingLayer) return;
+  couplingLayer.setAttribute('opacity','1');
+  if (moving) rebuildChain(time);
+  let previous={x:292.56,y:763};
+  chainLinks.forEach((link,i)=>{
+    const p=walkerPoint(chain[i]), end={x:p.x,y:p.y-30};
+    const dx=end.x-previous.x,dy=end.y-previous.y,span=Math.max(1,Math.hypot(dx,dy));
+    const bend=(i%2?1:-1)*Math.min(55,span*.36);
+    const nx=-dy/span,ny=dx/span;
+    link.path.setAttribute('d',`M${previous.x} ${previous.y} C${previous.x+dx*.33+nx*bend} ${previous.y+dy*.33+ny*bend} ${end.x-dx*.33+nx*bend} ${end.y-dy*.33+ny*bend} ${end.x} ${end.y}`);
+    link.length=link.path.getTotalLength(); previous=end;
+  });
+  if(moving && chain.length>=3 && time>=nextPacket) {
+    packets.push({node:svgNode('circle',{r:2.7,'class':'stream-packet',fill:streamColors[0]}),hop:0,distance:0,point:null});
+    nextPacket=time+1.7;
+  }
+  packets=packets.filter(packet=>{
+    if(moving) packet.distance+=elapsed*150;
+    while(chainLinks[packet.hop] && packet.distance>=chainLinks[packet.hop].length) {
+      packet.distance-=chainLinks[packet.hop].length;
+      const receiver=chain[packet.hop];
+      receiver.energized=time; receiver.routeBias++; receiver.stride+=.35;
+      packet.hop++;
+    }
+    const link=chainLinks[packet.hop];
+    if(!link) {
+      if(packet.point) releaseCurrent(previous,streamColors[packet.hop%4],time);
+      packet.node.remove(); return false;
+    }
+    const p=link.path.getPointAtLength(packet.distance);packet.point=p;
+    packet.node.setAttribute('cx',p.x);packet.node.setAttribute('cy',p.y);
+    packet.node.setAttribute('fill',streamColors[packet.hop%4]);
+    packet.node.setAttribute('r',2.4+packet.hop*.35);
+    return true;
+  });
+  chain.forEach(w=>w.node.style.setProperty('--coupling-glow',String(.15+Math.max(0,1-(time-(w.energized??-100))/1.2)*.8)));
+  flights=flights.filter(f=>{
+    if(moving) f.distance+=elapsed*210;
+    const p=f.path.getPointAtLength(Math.min(f.distance,f.length));
+    f.dot.setAttribute('cx',p.x);f.dot.setAttribute('cy',p.y);
+    let d='';
+    for(let n=0;n<=8;n++) {
+      const tail=f.path.getPointAtLength(Math.max(0,f.distance-48+n*6));
+      d+=`${n?'L':'M'}${tail.x} ${tail.y} `;
+    }
+    f.tail.setAttribute('d',d);
+    if(f.distance>=f.length) {if(f.target==='basin')basinArrival=time;f.group.remove();return false;}
+    return true;
+  });
+}
+
+let lastFrame = 0, flowTime = 0, stillComposition = false;
 function moveFigures(now) {
   const elapsed = lastFrame ? Math.min((now - lastFrame) / 1000, .1) : 0;
   lastFrame = now;
-  if (!paused && !document.hidden) flowTime += elapsed;
-  travellers.forEach((node,i) => {
-    const journey = flowTime / (64 + (i % 3) * 9) + i / travellers.length;
-    const lane = (i + Math.floor(journey) * 2) % routes.length;
-    const progress = journey % 1;
-    const point = routes[lane].getPointAtLength(progress * routeLengths[lane]);
-    const emergence = Math.min(1, progress / .055);
-    const size = .3 + emergence * .38;
-    node.setAttribute('transform', `translate(${point.x} ${point.y}) skewX(${Math.sin(flowTime*1.2+i)*2}) scale(${size})`);
-    node.setAttribute('opacity', String(Math.min(1, progress / .035, (1-progress)/.045)));
+  const moving = !paused && !document.hidden;
+  if (moving) flowTime += elapsed;
+  // Reduced motion starts with an inhabited, open factory, rather than an empty page.
+  if (paused && flowTime === 0 && !stillComposition) {
+    walkers.forEach((walker,i) => { walker.wait = 0; advanceWalker(walker,18+i*115,i); });
+    doorOpening = 1; stillComposition = true;
+  }
+  walkers.forEach((walker,i) => {
+    if (moving) {
+      if (walker.wait > 0) walker.wait = Math.max(0,walker.wait-elapsed);
+      else advanceWalker(walker,elapsed*(21+i%3*2),i);
+    }
+    drawWalker(walker,i,flowTime);
   });
+  drawChains(flowTime,elapsed,moving);
+  if (doorLeft) {
+    const opening = walkers.some(w => (w.wait > 0 && w.wait < 1.2) || (w.wait === 0 && w.edge === 'threshold' && w.distance < 28));
+    if (moving) doorOpening += ((opening ? 1 : .12)-doorOpening)*Math.min(1,elapsed*3);
+    const a = 1-1.8*doorOpening, b = .4*doorOpening;
+    doorLeft.setAttribute('transform',`matrix(${a} ${b} 0 1 ${504*(1-a)} ${-504*b})`);
+    doorRight.setAttribute('transform',`matrix(${a} ${-b} 0 1 ${550*(1-a)} ${550*b})`);
+  }
   basinPieces.forEach((node,i) => {
     const centers = [[460,385],[637,487],[453,590],[702,690],[1116,604],[1065,451]];
     const [cx,cy] = centers[i];
@@ -155,7 +310,7 @@ function moveFigures(now) {
       const pulse = (flowTime / 5 + i * .5) % 1;
       node.setAttribute('rx', String(38 + pulse * 115));
       node.setAttribute('ry', String(12 + pulse * 34));
-      node.setAttribute('opacity', String((1 - pulse) * .4));
+      node.setAttribute('opacity', String((1 - pulse) * .4 + Math.max(0,1-(flowTime-basinArrival)/2)*.45));
     });
   }
   if (travellers.length || water) requestAnimationFrame(moveFigures);
