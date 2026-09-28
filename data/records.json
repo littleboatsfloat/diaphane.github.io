@@ -1254,8 +1254,9 @@
     "suppliedYear": "2017",
     "lookupError": "HTTP Error 429: Too Many Requests",
     "cover": "assets/covers/record-079.jpg",
-    "artSource": "https://en.wikipedia.org/wiki/Being_So_Normal",
-    "source": "https://en.wikipedia.org/wiki/Being_So_Normal"
+    "artSource": "https://kingfisherbluez.bandcamp.com/album/being-so-normal",
+    "source": "https://en.wikipedia.org/wiki/Being_So_Normal",
+    "remoteCover": "https://f4.bcbits.com/img/a4025572734_5.jpg"
   },
   {
     "id": "record-080",
@@ -1290,10 +1291,10 @@
     "year": "2019",
     "genre": "Indie & dream pop",
     "suppliedYear": "2019",
-    "lookupError": "HTTP Error 429: Too Many Requests",
     "cover": "assets/covers/record-082.jpg",
-    "artSource": "https://en.wikipedia.org/wiki/When_We_Were_Friends",
-    "source": "https://en.wikipedia.org/wiki/When_We_Were_Friends"
+    "artSource": "https://music.apple.com/us/album/when-we-were-friends/1517139758?uo=4",
+    "source": "https://en.wikipedia.org/wiki/When_We_Were_Friends",
+    "remoteCover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/63/b1/74/63b174eb-845d-7ad1-dd2e-24d8e60fdeaa/193428577343_cover.jpg/600x600bb.jpg"
   },
   {
     "id": "record-083",
@@ -1393,8 +1394,8 @@
     "id": "record-089",
     "title": "Volume I",
     "creator": "Orebolo",
-    "year": "year unclear",
-    "genre": "Indie & dream pop",
+    "year": "2022",
+    "genre": "Live & jam",
     "suppliedYear": "year unclear",
     "matchScore": 1.0,
     "matchedTitle": "Volume I",
@@ -1609,13 +1610,13 @@
     "id": "record-103",
     "title": "Debussy / Ravel: String Quartets",
     "creator": "Emerson String Quartet",
-    "year": "~1980s",
+    "year": "1986",
     "genre": "Electronic, ambient & classical",
     "suppliedYear": "~1980s",
-    "lookupError": "HTTP Error 403: Forbidden",
     "cover": "assets/covers/record-103.jpg",
-    "artSource": "https://classical.music.apple.com/us/album/1452522947",
-    "source": "https://classical.music.apple.com/us/album/1452522947"
+    "artSource": "https://music.apple.com/us/album/debussy-ravel-string-quartets/1452612285?uo=4",
+    "source": "https://classical.music.apple.com/us/album/1452522947",
+    "remoteCover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/66/b2/66/66b2660b-05b5-9c1b-2435-b3fa4fa0d510/00028944550924.rgb.jpg/600x600bb.jpg"
   },
   {
     "id": "record-104",
@@ -1844,12 +1845,15 @@
   },
   {
     "id": "record-118",
-    "title": "LivePhish 04/03/98 & 04/05/98",
+    "title": "Live Phish 04.03.98",
     "creator": "Phish",
     "year": "1998",
     "genre": "Live & jam",
     "suppliedYear": "1998",
-    "lookupError": "HTTP Error 403: Forbidden"
+    "dateNote": "Recorded April 3, 1998, Nassau Coliseum. Island Tour; released in 2005.",
+    "cover": "assets/covers/record-118.jpg",
+    "artSource": "https://en.wikipedia.org/wiki/Live_Phish_04.03.98",
+    "remoteCover": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/Live_Phish_04.03.98_%28album_cover_art%29.jpg/250px-Live_Phish_04.03.98_%28album_cover_art%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": "record-119",
@@ -1992,5 +1996,26 @@
     "cover": "assets/covers/record-127.jpg",
     "artSource": "https://en.wikipedia.org/wiki/Garden_State_%28soundtrack%29",
     "source": "https://en.wikipedia.org/wiki/Garden_State_%28soundtrack%29"
+  },
+  {
+    "id": "record-punisher",
+    "title": "Punisher",
+    "creator": "Phoebe Bridgers",
+    "year": "2020",
+    "genre": "Indie & dream pop",
+    "cover": "assets/covers/record-punisher.jpg",
+    "artSource": "https://phoebebridgers.bandcamp.com/album/punisher",
+    "remoteCover": "https://f4.bcbits.com/img/a1836607637_5.jpg"
+  },
+  {
+    "id": "record-island-0405",
+    "title": "Live Phish 04.05.98",
+    "creator": "Phish",
+    "year": "1998",
+    "genre": "Live & jam",
+    "dateNote": "Recorded April 5, 1998, Providence Civic Center. Island Tour; released in 2005.",
+    "cover": "assets/covers/record-island-0405.jpg",
+    "artSource": "https://music.apple.com/us/album/live-phish-downloads-4-05-98-providence-city-center/286640334?uo=4",
+    "remoteCover": "https://is1-ssl.mzstatic.com/image/thumb/Music/7e/e2/b9/mzi.npfmzjnn.jpg/600x600bb.jpg"
   }
 ]

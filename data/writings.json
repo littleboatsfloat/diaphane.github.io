@@ -1,0 +1,131 @@
+[
+  {
+    "slug": "infinite-jest",
+    "title": "Infinite Jest: The Hubless Wheel Spinning Ever-Faster",
+    "category": "essays",
+    "date": "March, 2026",
+    "datetime": "2026-03",
+    "blurb": "A reading of <em>Infinite Jest</em> as Wallace’s attempt to escape postmodernism’s endless cycle of irony, intellect, and entertainment—and recover something sincere beneath it.",
+    "minutes": 11,
+    "sections": [
+      {
+        "title": "I. The Postmodern Cage",
+        "id": "section-1"
+      },
+      {
+        "title": "II. Between the Head and the Heart",
+        "id": "section-2"
+      },
+      {
+        "title": "III. Taking Better Aim",
+        "id": "section-3"
+      },
+      {
+        "title": "IV. Hal Is Literature",
+        "id": "section-4"
+      },
+      {
+        "title": "V. The Jest Is Infinite",
+        "id": "section-5"
+      },
+      {
+        "title": "Works cited",
+        "id": "sources"
+      }
+    ]
+  },
+  {
+    "slug": "the-lighthouse",
+    "title": "The Lighthouse",
+    "category": "fiction",
+    "date": "October, 2025",
+    "datetime": "2025-10",
+    "blurb": "A drifting meditation on home, perception, and the porous boundary between the self and the world, traced along a foggy coast toward a distant lighthouse.",
+    "minutes": 11,
+    "sections": []
+  },
+  {
+    "slug": "a-little-fable",
+    "title": "A Little Fable",
+    "category": "fiction",
+    "date": "July, 2026",
+    "datetime": "2026-07",
+    "blurb": "An excerpt from a book I'm writing (titled, <em>A Space Between</em>) about grief, control, and the systems we build to make disorder feel legible.",
+    "minutes": 7,
+    "sections": [],
+    "format": "Excerpt from A Space Between"
+  },
+  {
+    "slug": "rivverun",
+    "title": "rivverun",
+    "category": "fiction",
+    "date": "September, 2025",
+    "datetime": "2025-09",
+    "blurb": "A Joycean prose experiment about identity, self-consciousness, and the feeling of being carried through life by forces that never quite feel like your own.",
+    "minutes": 8,
+    "sections": []
+  },
+  {
+    "slug": "the-keyhole",
+    "title": "The Keyhole",
+    "category": "fiction",
+    "date": "November, 2025",
+    "datetime": "2025-11",
+    "blurb": "A surreal fable about pain, fate, and the search for a suffering that feels meaningful.",
+    "minutes": 20,
+    "sections": []
+  },
+  {
+    "slug": "laundering-precedent",
+    "title": "Laundering Precedent - The Dogmatism of Stare Decisis",
+    "category": "essays",
+    "date": "May, 2026",
+    "datetime": "2026-05",
+    "blurb": "A philosophical critique of stare decisis as a machine for laundering historical judgment into neutral authority—asking what happens when the law mistakes repetition for justice and lets the past govern the present.",
+    "minutes": 13,
+    "sections": [
+      {
+        "title": "Introduction",
+        "id": "section-1"
+      },
+      {
+        "title": "Stare Decisis Launders Historical Injustice",
+        "id": "section-2"
+      },
+      {
+        "title": "Stare Decisis Suppresses the Particularity of Cases",
+        "id": "section-3"
+      },
+      {
+        "title": "Stare Decisis Destroys Paths for Moral Learning in Law",
+        "id": "section-4"
+      },
+      {
+        "title": "Alternatives",
+        "id": "section-5"
+      },
+      {
+        "title": "Objections",
+        "id": "section-6"
+      },
+      {
+        "title": "Conclusion",
+        "id": "section-7"
+      },
+      {
+        "title": "Works Cited",
+        "id": "section-8"
+      }
+    ]
+  },
+  {
+    "slug": "fossil-fuel-freezeout",
+    "title": "Fossil Fuel Freezeout: Iceland as a Model for Post-Carbon Survival",
+    "category": "essays",
+    "date": "November, 2026",
+    "datetime": "2026-11",
+    "blurb": "<strong>What survives when oil disappears overnight? A speculative study of Iceland, global dependence, and the brutal political choices hidden beneath the promise of a post-carbon future.</strong>",
+    "pdf": "assets/writings/fossil-fuel-freezeout.pdf",
+    "format": "Research essay · 34 pages"
+  }
+]

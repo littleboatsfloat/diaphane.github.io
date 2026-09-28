@@ -16,7 +16,7 @@ motionButton.addEventListener('click', () => {
 preference.addEventListener('change', event => { paused = event.matches; updateMotion(); });
 updateMotion();
 
-// A link to the archive opens it; an ordinary visit leaves it collapsed.
+// Both indexes start open; deep links also reopen a folded section.
 function revealHash() {
   const id = location.hash.slice(1);
   const target = document.getElementById(id);
@@ -82,13 +82,21 @@ function measureConnections() {
   if (!network || !factory) return;
   const n = network.getBoundingClientRect(), f = factory.getBoundingClientRect();
   const scale = n.width / 600;
-  const doorX = (f.left + f.width * .343 - n.left) / scale;
-  const doorY = (f.top + f.height * .9 - n.top) / scale;
-  // One shared outlet rises from the door, then opens into a non-crossing fan.
-  routes.forEach((path,i) => {
-    const endY = 100 + i * 160;
-    path.setAttribute('d', `M${doorX} ${doorY} C${doorX+95} ${doorY-45} 490 ${doorY-150} 460 490 Q300 ${endY+70} -320 ${endY}`);
-  });
+  const compact = window.matchMedia('(max-width: 550px)').matches;
+  const doorX = compact ? 350 : (f.left + f.width * .343 - n.left) / scale;
+  const doorY = compact ? 640 : (f.top + f.height * .9 - n.top) / scale;
+  // Shared couplings split, loop, and meet again; no single privileged outlet.
+  const inlet = `M${doorX} ${doorY} C${doorX-75} ${doorY-100} 470 560 350 470`;
+  const secondInlet = `M${doorX+48} ${doorY-20} C${doorX+140} ${doorY-210} 535 495 350 470`;
+  const branches = [
+    `${inlet} C210 448 330 315 205 290 C105 270 158 166 58 135 S-90 175 -250 80`,
+    `${inlet} C405 410 462 320 360 245 C250 165 165 225 205 290 C260 385 76 403 -245 355`,
+    `${secondInlet} C235 540 104 488 145 415 C196 330 300 405 205 290 C85 177 -30 250 -250 220`,
+    `${secondInlet} C425 395 365 352 290 390 C170 450 135 328 205 290 C278 250 332 132 220 103 S45 110 -230 35`,
+    `M205 290 C100 327 113 409 145 415 C210 450 325 456 350 470 C450 512 489 580 406 607 S193 558 145 415`,
+    `M350 470 C408 422 420 299 360 245 C295 185 361 120 408 158 C471 211 296 365 205 290`
+  ];
+  routes.forEach((path,i) => path.setAttribute('d', branches[i]));
   routeLengths = routes.map(path => path.getTotalLength());
 }
 if (network) {
@@ -102,13 +110,14 @@ function moveFigures(now) {
   lastFrame = now;
   if (!paused && !document.hidden) flowTime += elapsed;
   travellers.forEach((node,i) => {
-    const lane = i % 3;
-    const progress = (flowTime / (48 + lane * 5) + i / travellers.length) % 1;
+    const journey = flowTime / (64 + (i % 3) * 9) + i / travellers.length;
+    const lane = (i + Math.floor(journey) * 2) % routes.length;
+    const progress = journey % 1;
     const point = routes[lane].getPointAtLength(progress * routeLengths[lane]);
     const emergence = Math.min(1, progress / .055);
     const size = .3 + emergence * .38;
     node.setAttribute('transform', `translate(${point.x} ${point.y}) skewX(${Math.sin(flowTime*1.2+i)*2}) scale(${size})`);
-    node.setAttribute('opacity', String(Math.min(1, progress / .012)));
+    node.setAttribute('opacity', String(Math.min(1, progress / .035, (1-progress)/.045)));
   });
   basinPieces.forEach((node,i) => {
     const centers = [[460,385],[637,487],[453,590],[702,690],[1116,604],[1065,451]];

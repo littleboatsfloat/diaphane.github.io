@@ -2,17 +2,19 @@
 from pathlib import Path
 from html import escape as esc
 import json,re
+from drawing_markup import drawing as living_art
 ROOT=Path(__file__).resolve().parent.parent
 
 def e(s):return esc(str(s or ''),quote=True)
 def art(name):
+ if name in ['bookshelf','films','records','places']:return living_art(name)
  if name not in ['bookshelf','films','records','places']:name='flow'
  suffix = 'supplied' if name != 'flow' else 'fine'
  return f'<img class="ink-drawing" src="assets/drawings/{name}-{suffix}.png" alt="" width="400" height="280">'
 def head(title,bodyclass=''):
  return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Books, films, records, writings, and projects collected by the basin."><title>{e(title) if title == 'the basin' else e(title) + ' — the basin'}</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body class="{bodyclass}"><a class="skip" href="#main">Skip to content</a><header id="top"><a class="site-name" href="index.html">the basin</a><nav aria-label="Main navigation"><a href="index.html#archive">archive</a><a href="writings.html">writings</a><a href="projects.html">projects</a></nav><button class="motion-button" id="motion" type="button" aria-pressed="false" hidden>pause movement</button></header>'''
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Books, films, records, writings, and projects collected by the basin."><title>{e(title) if title == 'the basin' else e(title) + ' — the basin'}</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body class="{bodyclass}"><a class="skip" href="#main">Skip to content</a><header id="top"><a class="site-name" href="index.html">the basin</a><nav aria-label="Main navigation"><a href="index.html#archive">archive</a><a href="index.html#writings">writings</a><a href="projects.html">projects</a></nav><button class="motion-button" id="motion" type="button" aria-pressed="false" hidden>pause movement</button></header>'''
 def foot():return '<footer><a href="index.html">the basin</a><a href="#top">↑ back to top</a></footer></body></html>'
 def write(name,content): (ROOT/name).write_text(content)
 def tile(title,url,drawing,number):return f'<a class="portal" href="{url}">{art(drawing)}<span class="portal-label"><span class="number">{number}</span><span class="portal-title">{title}</span><span class="arrow">↗</span></span></a>'
@@ -34,7 +36,7 @@ def featured_section(kind,data):
    result+=f'<article class="featured-card"><button type="button" data-open="{entry["id"]}" aria-label="Details for {title}"'+(' tabindex="-1"' if duplicate else '')+f'><span class="featured-art"><img src="{cover}" alt="{title}" decoding="async"></span><span class="featured-title">{title}</span><span class="featured-creator">{e(entry["creator"])}</span></button></article>'
   return result
  text=e(config.get('quote','')).replace('\n','<br>')
- return f'<p class="collection-subtitle">{e(config["subtitle"])}</p><blockquote class="collection-quote"><p>{text}</p><cite>{e(config["attribution"])}</cite></blockquote><section class="featured-section" aria-labelledby="featured-heading"><div class="featured-heading"><h2 id="featured-heading">On my mind lately</h2><span>featured · {len(picks)}</span></div><div class="featured-window" tabindex="0" aria-label="Featured selections; focus to pause and scroll"><div class="featured-track" style="--pan-duration:{len(picks)*16}s"><div class="featured-set">{cards()}</div><div class="featured-set featured-copy" aria-hidden="true">{cards(True)}</div></div></div></section><h2 class="full-collection-heading">The collection</h2>'
+ return f'<p class="collection-subtitle">{e(config["subtitle"])}</p><details class="collection-passage"><summary>a passage kept <span>↗</span></summary><blockquote class="collection-quote"><p>{text}</p><cite>{e(config["attribution"])}</cite></blockquote></details><section class="featured-section" aria-labelledby="featured-heading"><div class="featured-heading"><h2 id="featured-heading">On my mind lately</h2><span>featured · {len(picks)}</span></div><div class="featured-window" tabindex="0" aria-label="Featured selections; scroll to browse"><div class="featured-track" style="--pan-duration:{len(picks)*16}s"><div class="featured-set">{cards()}</div></div></div></section><h2 class="full-collection-heading">The collection</h2>'
 
 def catalogue(name,kind):
  data=json.loads((ROOT/'data'/f'{kind}.json').read_text())
@@ -43,7 +45,7 @@ def catalogue(name,kind):
  html=head(name,'catalogue '+kind)+f'<main id="main"><div class="page-heading"><a class="back" href="index.html#archive">← archive</a><h1>{name}</h1><span class="collection-count">{len(data)} '+('books' if kind=='books' else 'films & television' if kind=='films' else 'records')+'</span></div>'
  html+=featured_section(kind,data)
  html+='<div class="catalogue-controls"><label class="search-label" for="search">Search '+name+'</label><input id="search" type="search" placeholder="'+('Title or author' if kind=='books' else 'Title or artist' if kind=='records' else 'Title or director')+'…" autocomplete="off"><label class="sr-only" for="genre">Genre</label><select id="genre"><option value="">All genres</option>'+''.join(f'<option>{e(g)}</option>' for g in sorted(groups))+'</select><button id="clear-filters" type="button">clear</button><p id="result-count" role="status" aria-live="polite"></p></div>'
- if kind=='books':html+='<p class="catalogue-note">My four- and five-star reads, alongside a few personal additions. Original publication years; covers may show later editions.</p>'
+ if kind=='books':html+='<p class="catalogue-note">A personal shelf, gathered over time. Open a cover for a closer look; editions may differ.</p>'
  html+='<p id="no-results" hidden>No matches. Try another title or genre.</p>'
  for genre,entries in sorted(groups.items()):
   html+=f'<section class="genre-group" data-genre="{e(genre)}"><h2>{e(genre)} <span>{len(entries)}</span></h2><div class="shelf-grid">'
@@ -51,7 +53,6 @@ def catalogue(name,kind):
    eid=entry['id'];title=e(entry['title']);creator=e(entry['creator']);year=e(entry.get('publicationDate',entry.get('year')) or 'Date unconfirmed');cover=entry.get('cover')
    image=f'<img src="{e(cover)}" alt="{title} — '+('poster' if kind=='films' else 'cover')+'" loading="lazy" decoding="async">' if cover else f'<span class="cover-unavailable"><span>{title}</span><small>Artwork not yet located</small></span>'
    html+=f'<article class="shelf-item" data-search="{e(entry["title"]+" "+entry["creator"])}" data-genre="{e(genre)}"><button class="cover-button" type="button" data-open="{eid}" aria-label="Details for {title}"><span class="cover-frame">{image}</span></button><h3><button type="button" data-open="{eid}">{title}</button></h3><p class="creator">{creator}</p><p class="release-date">{year}</p>'
-   if kind=='books' and entry.get('rating'):html+=f'<p class="shelf-rating" aria-label="{entry["rating"]} out of 5 stars">{"★" * entry["rating"]}</p>'
    if entry.get('quote'):html+='<span class="quote-marker">a passage kept ↗</span>'
    html+='</article>'
   html+='</div></section>'
@@ -73,10 +74,11 @@ def catalogue(name,kind):
   html+='</div></div></div></dialog>'
  write(name+'.html',html+foot())
 for name,kind in [('bookshelf','books'),('films','films'),('records','records')]:catalogue(name,kind)
-for name,title,drawing,parent in [('places','places','places','archive'),('fiction','fiction','writings','writings'),('essays','essays','writings','writings')]:
+for name,title,drawing,parent in [('places','places','places','archive')]:
  back='writings.html' if parent=='writings' else 'index.html#archive' if parent=='archive' else 'index.html'
- write(name+'.html',head(title)+f'<main id="main"><div class="page-heading"><a class="back" href="{back}">← {parent}</a><h1>{title}</h1></div><div class="quiet-page">{art(drawing)}</div></main>'+foot())
-writing_quote = re.search(r'<blockquote class="writing-quote">.*?</blockquote>', home, re.S).group(0)
-write('writings.html',head('writings')+'<main id="main"><div class="page-heading"><a class="back" href="index.html">← home</a><h1>writings</h1></div>'+writing_quote+'<div class="writing-index">'+tile('fiction','fiction.html','writings','01')+tile('essays','essays.html','writings','02')+'</div></main>'+foot())
+ write(name+'.html',head(title)+f'<main id="main"><div class="page-heading"><a class="back" href="{back}">← {parent}</a><h1>{title}</h1></div><div class="quiet-page places-page">{art(drawing)}<p class="place-note">A place for places.<br><em>More to come.</em></p></div></main>'+foot())
+from build_writings import build_writings
+build_writings(ROOT, head, foot, write)
+write('writings.html', '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=index.html#writings"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="index.html#writings"><title>writings — the basin</title></head><body><a href="index.html#writings">Continue to writings</a></body></html>')
 write('projects.html',head('projects')+'<main id="main"><div class="page-heading"><a class="back" href="index.html">← home</a><h1>projects</h1></div><article class="project-feature"><a class="project-art" href="projects/tabline.html">'+art('projects')+'</a><div><h2><a href="projects/tabline.html">Tabline ↗</a></h2><p>A tool for learning music by ear. Load an audio file, slow it down, loop a phrase, and write tablature directly along the timeline as you listen.</p><p>For guitar, bass, and ukulele, with an optional beat grid, tab import and export, and a saved-tab library in your browser. Audio stays on your device.</p><a class="text-link" href="projects/tabline.html">open Tabline ↗</a></div></article></main>'+foot())
 print('Built homepage, 3 catalogues, writings, projects, and reserved sections.')

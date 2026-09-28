@@ -190,10 +190,11 @@
     "source": "https://www.goodreads.com/book/show/22613",
     "rating": 5,
     "cover": "assets/covers/book-22613.jpg",
-    "artSource": "https://covers.openlibrary.org/b/isbn/9780472065219-M.jpg?default=false",
+    "artSource": "https://press.umich.edu/Books/S/Simulacra-and-Simulation",
     "publicationDate": "1981",
     "dateSource": "https://en.wikipedia.org/wiki/Simulacra_and_Simulation",
-    "editionYear": "1994"
+    "editionYear": "1994",
+    "remoteCover": "https://press.umich.edu/var/site/storage/images/university-of-michigan-press/books/s/simulacra-and-simulation/9780472065219_cover/6778168-1-eng-CA/9780472065219_cover_rb_fullcover.jpg"
   },
   {
     "id": "book-28187",
@@ -804,16 +805,17 @@
   },
   {
     "id": "book-59231067",
-    "title": "Epictetus - Enchridion and Discourses",
+    "title": "The Enchiridion",
     "creator": "Epictetus",
     "year": "c. 125",
     "publicationDate": "c. 125",
     "genre": "Philosophy",
-    "isbn": "",
+    "isbn": "9780486433592",
     "source": "https://www.goodreads.com/book/show/59231067",
     "rating": 4,
     "cover": "assets/covers/book-59231067.jpg",
-    "artSource": "https://www.goodreads.com/book/show/59231067"
+    "artSource": "https://openlibrary.org/isbn/9780486433592",
+    "remoteCover": "https://covers.openlibrary.org/b/isbn/9780486433592-L.jpg?default=false"
   },
   {
     "id": "book-10838202",
@@ -869,7 +871,7 @@
   },
   {
     "id": "book-43125362",
-    "title": "Tolstoy Selected Stories",
+    "title": "Tolstoy: Selected Stories",
     "creator": "Leo Tolstoy",
     "year": "2018",
     "publicationDate": "2018",
@@ -878,7 +880,8 @@
     "source": "https://www.goodreads.com/book/show/43125362",
     "rating": 4,
     "cover": "assets/covers/book-43125362.jpg",
-    "artSource": "https://covers.openlibrary.org/b/isbn/9781788884334-M.jpg?default=false"
+    "artSource": "https://openlibrary.org/isbn/9781788884334",
+    "remoteCover": "https://covers.openlibrary.org/b/isbn/9781788884334-L.jpg?default=false"
   },
   {
     "id": "book-375802",
@@ -1031,11 +1034,12 @@
     "year": "1774",
     "publicationDate": "1774",
     "genre": "Literary fiction",
-    "isbn": "9780812969900",
+    "isbn": "9780140445039",
     "source": "https://www.goodreads.com/book/show/16640",
     "rating": 4,
     "cover": "assets/covers/book-16640.jpg",
-    "artSource": "https://covers.openlibrary.org/b/isbn/9780812969900-M.jpg?default=false"
+    "artSource": "https://penguinrandomhouselibrary.com/book/?isbn=9780140445039",
+    "remoteCover": "https://images.penguinrandomhouse.com/cover/9780140445039"
   },
   {
     "id": "book-25463302",
@@ -1110,24 +1114,12 @@
     "year": "2002",
     "publicationDate": "2002",
     "genre": "Literary fiction",
-    "isbn": "",
+    "isbn": "9781400079278",
     "source": "https://www.goodreads.com/book/show/4929",
     "rating": 4,
     "cover": "assets/covers/book-4929.jpg",
-    "artSource": "https://www.penguinrandomhouse.com/books/118718/kafka-on-the-shore-by-haruki-murakami/"
-  },
-  {
-    "id": "book-92307",
-    "title": "Being and Time",
-    "creator": "Martin Heidegger",
-    "year": "1927",
-    "publicationDate": "1927",
-    "genre": "Philosophy",
-    "isbn": "9780060638504",
-    "source": "https://www.goodreads.com/book/show/92307",
-    "rating": 4,
-    "cover": "assets/covers/book-92307.jpg",
-    "artSource": "https://covers.openlibrary.org/b/isbn/9780060638504-M.jpg?default=false"
+    "artSource": "https://www.penguinrandomhouse.com/books/118718/kafka-on-the-shore-by-haruki-murakami/",
+    "remoteCover": "https://images1.penguinrandomhouse.com/cover/9781400079278"
   },
   {
     "id": "book-2767052",
@@ -1277,13 +1269,16 @@
   {
     "id": "book-206601357",
     "title": "Cute Accelerationism",
-    "creator": "Amy Ireland",
+    "creator": "Amy Ireland & Maya B. Kronic",
     "year": "2024",
     "publicationDate": "2024",
     "genre": "Philosophy",
     "isbn": "9781915103154",
     "source": "https://www.goodreads.com/book/show/206601357",
-    "rating": 4
+    "rating": 4,
+    "cover": "assets/covers/book-206601357.jpg",
+    "artSource": "https://www.urbanomic.com/edition/cute-accelerationism-original-edition/",
+    "remoteCover": "https://www.urbanomic.com/wp-content/uploads/2023/12/cute.jpg"
   },
   {
     "id": "book-22628",
@@ -1428,5 +1423,122 @@
     "source": "https://www.jstor.org/stable/j.ctv32r0376",
     "cover": "assets/covers/book-eros-bittersweet.jpg",
     "artSource": "https://covers.openlibrary.org/b/id/801532-L.jpg"
+  },
+  {
+    "id": "book-446542",
+    "title": "Molloy",
+    "creator": "Samuel Beckett",
+    "year": "1951",
+    "publicationDate": "1951",
+    "yearLabel": "first published",
+    "editionYear": "1955",
+    "genre": "Literary fiction",
+    "isbn": "9780802151360",
+    "rating": 4,
+    "source": "https://www.goodreads.com/book/show/446542",
+    "cover": "assets/covers/book-446542.jpg",
+    "artSource": "https://covers.openlibrary.org/b/id/1053150-L.jpg"
+  },
+  {
+    "id": "book-154329",
+    "title": "Spinoza: Practical Philosophy",
+    "creator": "Gilles Deleuze",
+    "year": "1970",
+    "publicationDate": "1970",
+    "yearLabel": "first published",
+    "editionYear": "1988",
+    "genre": "Philosophy",
+    "isbn": "9780872862180",
+    "rating": 5,
+    "source": "https://www.goodreads.com/book/show/154329",
+    "cover": "assets/covers/book-154329.jpg",
+    "artSource": "https://covers.openlibrary.org/b/id/662836-L.jpg"
+  },
+  {
+    "id": "book-22397551",
+    "title": "#Accelerate: The Accelerationist Reader",
+    "creator": "Robin Mackay",
+    "year": "2014",
+    "publicationDate": "2014",
+    "yearLabel": "first published",
+    "editionYear": "2014",
+    "genre": "Philosophy",
+    "isbn": "9780957529557",
+    "rating": 4,
+    "source": "https://www.goodreads.com/book/show/22397551",
+    "cover": "assets/covers/book-22397551.jpg",
+    "artSource": "https://www.urbanomic.com/wp-content/uploads/2015/03/Accelerate-cover.jpg"
+  },
+  {
+    "id": "book-203346",
+    "title": "Desert Islands: And Other Texts, 1953-1974",
+    "creator": "Gilles Deleuze",
+    "year": "2002",
+    "publicationDate": "2002",
+    "yearLabel": "first published",
+    "editionYear": "2004",
+    "genre": "Philosophy",
+    "isbn": "9781584350187",
+    "rating": 5,
+    "source": "https://www.goodreads.com/book/show/203346",
+    "cover": "assets/covers/book-203346.jpg",
+    "artSource": "https://covers.openlibrary.org/b/isbn/9781584350187-L.jpg?default=false"
+  },
+  {
+    "id": "book-135452",
+    "title": "Visions of Excess: Selected Writings, 1927–1939",
+    "creator": "Georges Bataille",
+    "year": "1985",
+    "publicationDate": "1985",
+    "yearLabel": "first published",
+    "editionYear": "1985",
+    "genre": "Philosophy",
+    "isbn": "9780816612833",
+    "rating": 4,
+    "source": "https://www.goodreads.com/book/show/135452",
+    "cover": "assets/covers/book-135452.jpg",
+    "artSource": "https://covers.openlibrary.org/b/isbn/9780816612833-L.jpg?default=false"
+  },
+  {
+    "id": "book-342847",
+    "title": "Pure Immanence: Essays on a Life (Mit Press)",
+    "creator": "Gilles Deleuze",
+    "year": "2001",
+    "publicationDate": "2001",
+    "yearLabel": "first published",
+    "editionYear": "2005",
+    "genre": "Philosophy",
+    "isbn": "9781890951252",
+    "rating": 4,
+    "source": "https://www.goodreads.com/book/show/342847",
+    "cover": "assets/covers/book-342847.jpg",
+    "artSource": "https://covers.openlibrary.org/b/isbn/9781890951252-L.jpg?default=false"
+  },
+  {
+    "id": "book-203310",
+    "title": "Poetry, Language, Thought",
+    "creator": "Martin Heidegger",
+    "year": "1971",
+    "publicationDate": "1971",
+    "yearLabel": "first published",
+    "editionYear": "2013",
+    "genre": "Philosophy",
+    "isbn": "",
+    "rating": 4,
+    "source": "https://www.goodreads.com/book/show/203310",
+    "cover": "assets/covers/book-203310.jpg",
+    "artSource": "https://covers.openlibrary.org/b/id/39663-L.jpg"
+  },
+  {
+    "id": "book-being-and-time",
+    "title": "Being and Time",
+    "creator": "Martin Heidegger",
+    "year": "1927",
+    "publicationDate": "1927",
+    "genre": "Philosophy",
+    "isbn": "9780061575594",
+    "cover": "assets/covers/book-being-and-time.jpg",
+    "artSource": "https://openlibrary.org/isbn/9780061575594",
+    "remoteCover": "https://covers.openlibrary.org/b/isbn/9780061575594-L.jpg?default=false"
   }
 ]
