@@ -1,0 +1,775 @@
+{
+  "collection": "Website Places",
+  "media_count": 96,
+  "date_note": "Capture dates are recorded when supplied by the user; times are intentionally omitted. Uploaded JPEG copies generally lack original EXIF capture dates.",
+  "media": [
+    {
+      "file": "colorado/diamond-lake-indian-peaks/diamond-lake-01.jpeg",
+      "location": "Diamond Lake, Indian Peaks Wilderness, Colorado, USA",
+      "subject": "Diamond Lake and surrounding peaks",
+      "capture_date": "2026-06-11",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user."
+    },
+    {
+      "file": "colorado/diamond-lake-indian-peaks/diamond-lake-moose-and-calf-01.jpeg",
+      "location": "Diamond Lake, Indian Peaks Wilderness, Colorado, USA",
+      "subject": "moose and calf near Diamond Lake",
+      "capture_date": "2026-06-11",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user."
+    },
+    {
+      "file": "colorado/diamond-lake-indian-peaks/diamond-lake-snowfield-01.jpeg",
+      "location": "Diamond Lake, Indian Peaks Wilderness, Colorado, USA",
+      "subject": "Diamond Lake below snowfield",
+      "capture_date": "2026-06-11",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user."
+    },
+    {
+      "file": "iceland/skalanes/skalanes-seydisfjordur-sunset-01.jpeg",
+      "location": "Skálanes, Seyðisfjörður, East Iceland",
+      "subject": "sunset over fjord and mountain landscape",
+      "capture_date": "2025-10-07",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; time intentionally omitted."
+    },
+    {
+      "file": "iceland/skalanes/skalanes-sea-cliffs-01.jpeg",
+      "location": "Skálanes, Seyðisfjörður, East Iceland",
+      "subject": "sea cliffs and seabirds",
+      "capture_date": "2025-10-06",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; time intentionally omitted."
+    },
+    {
+      "file": "iceland/skalanes/skalanes-sea-cliffs-video-01.mp4",
+      "location": "Skálanes, Seyðisfjörður, East Iceland",
+      "subject": "sea-cliff video",
+      "capture_date": "2025-10-05",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; time intentionally omitted."
+    },
+    {
+      "file": "iceland/skaftafell/svartifoss-skaftafell-01.jpeg",
+      "location": "Svartifoss, Skaftafell, Vatnajökull National Park, Iceland",
+      "subject": "Svartifoss waterfall",
+      "capture_date": "2025-10-13",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; Photos location label was Fagurhólsmýri, but landmark is Svartifoss in Skaftafell; time intentionally omitted."
+    },
+    {
+      "file": "iceland/grimsey/grimsey-aurora-over-sea-01.jpeg",
+      "location": "Grímsey, North Iceland",
+      "subject": "aurora over sea",
+      "capture_date": "2025-09-29",
+      "date_source": "user-provided date / Photos screenshot",
+      "notes": "Date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/grimsey/grimsey-aurora-over-sea-02.jpeg",
+      "location": "Grímsey, North Iceland",
+      "subject": "aurora over sea",
+      "capture_date": "2025-09-29",
+      "date_source": "user-provided date / Photos screenshot",
+      "notes": "Date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/grimsey/grimsey-aurora-clouds-01.jpeg",
+      "location": "Grímsey, North Iceland",
+      "subject": "aurora through clouds",
+      "capture_date": "2025-09-29",
+      "date_source": "user-provided date / Photos screenshot",
+      "notes": "Date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/grimsey/grimsey-lighthouse-01.jpeg",
+      "location": "Grímsey, North Iceland",
+      "subject": "Grímsey lighthouse",
+      "capture_date": "2025-09-30",
+      "date_source": "user-provided date",
+      "notes": "Date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/grimsey/grimsey-basalt-coast-01.jpeg",
+      "location": "Grímsey, North Iceland",
+      "subject": "basalt coastline",
+      "capture_date": "2025-09-29",
+      "date_source": "user-provided date / Photos screenshot",
+      "notes": "Date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/grimsey/midgardakirkja-grimsey-01.jpeg",
+      "location": "Grímsey, North Iceland",
+      "subject": "Miðgarðakirkja",
+      "capture_date": "2025-09-30",
+      "date_source": "user-provided date",
+      "notes": "Date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/flateyri/onundarfjordur-from-flateyri-01.jpeg",
+      "location": "Flateyri, Önundarfjörður, Westfjords, Iceland",
+      "subject": "view across Önundarfjörður",
+      "capture_date": "2025-09-23",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; time intentionally omitted."
+    },
+    {
+      "file": "iceland/flateyri/mountain-ridge-above-flateyri-01.jpeg",
+      "location": "Flateyri, Önundarfjörður, Westfjords, Iceland",
+      "subject": "mountain ridge near Flateyri",
+      "capture_date": "2025-09-20",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; exact peak not identified; time intentionally omitted."
+    },
+    {
+      "file": "iceland/isafjordur/isafjordur-skutulsfjordur-overlook-01.jpeg",
+      "location": "Ísafjörður, Skutulsfjörður, Westfjords, Iceland",
+      "subject": "overlook of Ísafjörður and Skutulsfjörður with cruise ship in harbor",
+      "capture_date": "2025-09-02",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; exact overlook/trail not identified; time intentionally omitted."
+    },
+    {
+      "file": "iceland/isafjordur/hiking-above-isafjordur-01.jpeg",
+      "location": "Ísafjörður, Skutulsfjörður, Westfjords, Iceland",
+      "subject": "hikers descending a mountain trail above Ísafjörður",
+      "capture_date": "2025-09-11",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; exact mountain/trail not identified; time intentionally omitted."
+    },
+    {
+      "file": "iceland/rangarthing-eystra/rangarthing-eystra-mountain-01.jpeg",
+      "location": "Rangárþing eystra, South Iceland",
+      "subject": "green mountain slopes and layered rock above farmland",
+      "capture_date": "2025-08-19",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Location label and capture date supplied by user screenshot; exact mountain not identified."
+    },
+    {
+      "file": "montana/pine-creek-falls/pine-creek-falls-01.jpeg",
+      "location": "Pine Creek Falls, Montana, USA",
+      "subject": "Pine Creek Falls waterfall",
+      "capture_date": "2025-07-25",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "alaska/kenai-fjords-national-park/kenai-fjords-sea-stacks-01.jpeg",
+      "location": "Kenai Fjords National Park, Alaska, USA",
+      "subject": "forested sea stacks and steep coastal cliffs",
+      "capture_date": "2025-06-22",
+      "date_source": "user-provided date",
+      "notes": "User supplied 'Kenai national park'; normalized to the official name Kenai Fjords National Park. Exact bay/formation not identified; time intentionally omitted."
+    },
+    {
+      "file": "alaska/kenai-fjords-national-park/kenai-fjords-humpback-whale-01.jpeg",
+      "location": "Kenai Fjords National Park, Alaska, USA",
+      "subject": "humpback whale surfacing near rocky shoreline",
+      "capture_date": "2025-06-22",
+      "date_source": "user-provided date",
+      "notes": "User supplied 'Kenai national park'; normalized to the official name Kenai Fjords National Park. Exact bay not identified; time intentionally omitted."
+    },
+    {
+      "file": "alaska/kenai-fjords-national-park/kenai-fjords-mountains-01.jpeg",
+      "location": "Kenai Fjords National Park, Alaska, USA",
+      "subject": "snow-streaked coastal mountains above the water",
+      "capture_date": "2025-06-22",
+      "date_source": "user-provided date",
+      "notes": "User supplied 'Kenai national park'; normalized to the official name Kenai Fjords National Park. Exact peak/fjord not identified; time intentionally omitted."
+    },
+    {
+      "file": "alaska/girdwood/girdwood-chugach-mountains-01.jpeg",
+      "location": "Girdwood, Chugach Mountains, Alaska, USA",
+      "subject": "snow-streaked Chugach Mountains near Girdwood",
+      "capture_date": "2025-06-20",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact peak not identified; time intentionally omitted."
+    },
+    {
+      "file": "alaska/girdwood/virgin-creek-falls-01.jpeg",
+      "location": "Virgin Creek Falls, Girdwood, Alaska, USA",
+      "subject": "Virgin Creek Falls in temperate rainforest",
+      "capture_date": "2025-06-23",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user. Waterfall identified as Virgin Creek Falls based on Girdwood location and landscape; time intentionally omitted."
+    },
+    {
+      "file": "alaska/byron-glacier/byron-glacier-01.jpeg",
+      "location": "Byron Glacier, Portage Valley, Alaska, USA",
+      "subject": "Byron Glacier and surrounding snow-covered mountains",
+      "capture_date": "2025-06-23",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "alaska/hope/hope-chugach-mountains-01.jpeg",
+      "location": "Hope, Kenai Peninsula, Alaska, USA",
+      "subject": "snow-streaked mountains near Hope",
+      "capture_date": "2025-06-22",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "alaska/whittier/whittier-glacier-01.jpeg",
+      "location": "Whittier, Prince William Sound, Alaska, USA",
+      "subject": "glacier and snow-covered mountains near Whittier",
+      "capture_date": "2025-06-21",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact glacier not identified; time intentionally omitted."
+    },
+    {
+      "file": "alaska/whittier/whittier-glacier-and-stream-01.jpeg",
+      "location": "Whittier, Prince William Sound, Alaska, USA",
+      "subject": "glacier viewed above a mountain stream near Whittier",
+      "capture_date": "2025-06-21",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact glacier not identified; time intentionally omitted."
+    },
+    {
+      "file": "alaska/aerial/alaska-aerial-mountains-01.jpeg",
+      "location": "Alaska, USA (aerial view; exact range uncertain)",
+      "subject": "snow-covered mountain range photographed from flight to Alaska",
+      "capture_date": "2025-06-20",
+      "date_source": "user-provided date",
+      "notes": "User said this was photographed on a flight to Alaska. Exact range not confirmed; keep location broad until flight route is known. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/bridal-veil-falls-01.jpeg",
+      "location": "Bridal Veil Falls, Telluride, Colorado, USA",
+      "subject": "Bridal Veil Falls",
+      "capture_date": "2024-07-18",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/bridal-veil-basin-01.jpeg",
+      "location": "Bridal Veil Basin, Telluride, Colorado, USA",
+      "subject": "alpine basin and wildflowers above Telluride",
+      "capture_date": "2024-07-25",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "switzerland/kandersteg/oeschinensee-kandersteg-01.jpeg",
+      "location": "Oeschinensee, Kandersteg, Bernese Oberland, Switzerland",
+      "subject": "Oeschinensee and surrounding alpine peaks",
+      "capture_date": "2024-05-24",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; landmark identified as Oeschinensee. Time intentionally omitted."
+    },
+    {
+      "file": "italy/florence/florence-cathedral-duomo-01.jpeg",
+      "location": "Cathedral of Santa Maria del Fiore (Duomo), Florence, Tuscany, Italy",
+      "subject": "Florence Cathedral dome and exterior",
+      "capture_date": "2024-05-17",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; landmark identified from the image. Time intentionally omitted."
+    },
+    {
+      "file": "switzerland/belpberg/belpberg-bernese-alps-view-01.jpeg",
+      "location": "Belpberg, Canton of Bern, Switzerland (probable; exact viewpoint uncertain)",
+      "subject": "pastoral hills with distant Bernese Alps at dusk",
+      "capture_date": "2024-05-11",
+      "date_source": "user-provided date",
+      "notes": "User said the photo was taken near Belp. Landscape and documented views from Belpberg/Chutzen toward the Bernese Alps strongly fit; exact viewpoint is not confirmed. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/eldora/eldora-autumn-valley-01.jpeg",
+      "location": "Eldora, Colorado, USA",
+      "subject": "autumn aspens and mountain valley near Eldora",
+      "capture_date": "2023-09-29",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/fontana-lake/fontana-lake-railroad-bridge-01.jpeg",
+      "location": "Fontana Lake, North Carolina, USA",
+      "subject": "railroad bridge crossing Fontana Lake",
+      "capture_date": "2023-07-24",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact bridge name not confirmed. Time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/bald-head-island/bald-head-island-sunset-01.jpeg",
+      "location": "Bald Head Island, North Carolina, USA",
+      "subject": "sunset over dunes and beachfront homes",
+      "capture_date": "2022-07-18",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "italy/riomaggiore/riomaggiore-coast-sunset-01.jpeg",
+      "location": "Riomaggiore, Cinque Terre, Liguria, Italy",
+      "subject": "Riomaggiore coastline and harbor at sunset",
+      "capture_date": "2024-05-15",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "italy/florence/florence-rose-garden-view-01.jpeg",
+      "location": "Giardino delle Rose, Florence, Tuscany, Italy",
+      "subject": "Rose Garden overlooking Florence, with the Duomo and Palazzo Vecchio skyline",
+      "capture_date": "2024-05-18",
+      "date_source": "user-provided date",
+      "notes": "Location identified as Giardino delle Rose (Rose Garden), Florence. Time intentionally omitted."
+    },
+    {
+      "file": "italy/florence/florence-street-duomo-view-01.jpeg",
+      "location": "Florence, Tuscany, Italy",
+      "subject": "street view toward the dome of the Cathedral of Santa Maria del Fiore",
+      "capture_date": "2024-05-17",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; the Duomo is visible at the end of the street. Exact street not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "italy/riomaggiore/riomaggiore-coastal-overlook-01.jpeg",
+      "location": "Riomaggiore, Cinque Terre, Liguria, Italy",
+      "subject": "elevated coastal view over Riomaggiore and the Ligurian Sea",
+      "capture_date": "2024-05-16",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "italy/riomaggiore/riomaggiore-harbor-01.jpeg",
+      "location": "Riomaggiore, Cinque Terre, Liguria, Italy",
+      "subject": "Riomaggiore harbor and colorful hillside buildings",
+      "capture_date": "2024-05-15",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "italy/rome/colosseum-interior-01.jpeg",
+      "location": "Colosseum, Rome, Lazio, Italy",
+      "subject": "interior of the Colosseum and arena substructures",
+      "capture_date": "2024-05-21",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; landmark identified as the Colosseum. Time intentionally omitted."
+    },
+    {
+      "file": "switzerland/stechelberg-lengwald/stechelberg-lengwald-lauterbrunnen-valley-01.jpeg",
+      "location": "Stechelberg–Lengwald, Lauterbrunnen Valley, Bernese Oberland, Switzerland",
+      "subject": "alpine valley road and snow-covered mountains near Stechelberg–Lengwald",
+      "capture_date": "2024-05-11",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Location label and date supplied by user screenshot; exact peaks not identified. Time intentionally omitted."
+    },
+    {
+      "file": "switzerland/trummelbach-falls/lauterbrunnen-valley-from-trummelbach-falls-01.jpeg",
+      "location": "Trümmelbach Falls, Lauterbrunnen Valley, Bernese Oberland, Switzerland",
+      "subject": "view across Lauterbrunnen Valley from the Trümmelbach Falls area",
+      "capture_date": "2024-05-11",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Location and date supplied by Apple Photos screenshot; time intentionally omitted."
+    },
+    {
+      "file": "switzerland/thun/bonstettenpark-lake-thun-01.jpeg",
+      "location": "Bonstettenpark, Thun (Gwatt), Lake Thun, Canton of Bern, Switzerland",
+      "subject": "view across Lake Thun toward the Bernese Alps from Bonstettenpark",
+      "capture_date": "2024-05-12",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Location label and date supplied by Apple Photos screenshot; time intentionally omitted. Exact mountain peaks not identified."
+    },
+    {
+      "file": "switzerland/bern/bern-bear-pit-01.jpeg",
+      "location": "Bärengraben (Bear Pit), Bern, Canton of Bern, Switzerland",
+      "subject": "brown bears at the Bern Bear Pit",
+      "capture_date": "2024-05-13",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Apple Photos location label shown as 'Fosse Aux Ours' (Bear Pit); normalized to Bärengraben, Bern. Time intentionally omitted."
+    },
+    {
+      "file": "switzerland/bern/bern-aare-old-town-01.jpeg",
+      "location": "Bern, Canton of Bern, Switzerland",
+      "subject": "Aare River and Bern Old Town with Bern Minster in the distance",
+      "capture_date": "2024-05-13",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "switzerland/geneva/saint-pierre-cathedral-interior-01.jpeg",
+      "location": "Cathédrale Saint-Pierre, Geneva Old Town, Geneva, Switzerland",
+      "subject": "interior nave of St. Peter's Cathedral (Cathédrale Saint-Pierre)",
+      "capture_date": "2024-05-14",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Apple Photos location label shown as 'Geneva - Cité'; landmark identified as Cathédrale Saint-Pierre. Time intentionally omitted."
+    },
+    {
+      "file": "switzerland/lucerne/lucerne-old-town-mural-01.jpeg",
+      "location": "Lucerne Old Town (Altstadt), Lucerne, Switzerland",
+      "subject": "painted building facade in Lucerne Old Town",
+      "capture_date": "2024-05-26",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot location label: Lucerne – Altstadt-Wey; time intentionally omitted."
+    },
+    {
+      "file": "switzerland/lucerne/lucerne-baroque-church-interior-01.jpeg",
+      "location": "Lucerne, Switzerland",
+      "subject": "Baroque church interior",
+      "capture_date": "2024-05-26",
+      "date_source": "user-provided date matching the Lucerne photo",
+      "notes": "User specified that this photo has the same date as the Lucerne photo. Exact church not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "switzerland/lauterbrunnen/staubbach-falls-01.jpeg",
+      "location": "Staubbach Falls, Lauterbrunnen, Bernese Oberland, Switzerland",
+      "subject": "Staubbach Falls",
+      "capture_date": "2024-06-01",
+      "date_source": "Apple Photos screenshot provided by user",
+      "notes": "Location label shown as Lauterbrunnen; landmark identified as Staubbach Falls. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/blue-lakes-mount-sneffels/blue-lakes-01.jpeg",
+      "location": "Blue Lakes, Mount Sneffels Wilderness, Colorado, USA",
+      "subject": "turquoise alpine lake in the Blue Lakes basin",
+      "capture_date": "2024-07-23",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels the location Blue Lakes. Based on the user’s Telluride-area trip and the Blue Lakes trail context, filed under Mount Sneffels Wilderness; exact lake within the basin not asserted. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/bridal-veil-falls-power-station-01.jpeg",
+      "location": "Bridal Veil Falls, Telluride, Colorado, USA",
+      "subject": "Bridal Veil Falls with the historic power station above the falls",
+      "capture_date": "2024-07-25",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Date supplied by user screenshot; time intentionally omitted. Landmark is Bridal Veil Falls; building above the falls is the historic power station."
+    },
+    {
+      "file": "washington/seattle/university-of-washington-campus-01.jpeg",
+      "location": "University of Washington, Seattle, Washington, USA",
+      "subject": "University of Washington campus",
+      "capture_date": "2024-12-27",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Location identified by user as University of Washington; screenshot shows Seattle and December 27, 2024. Exact campus viewpoint not asserted; time intentionally omitted."
+    },
+    {
+      "file": "washington/bainbridge-island/pia-the-peacekeeper-sakai-park-01.jpeg",
+      "location": "Sakai Park, Bainbridge Island, Washington, USA",
+      "subject": "Pia the Peacekeeper, a Thomas Dambo troll sculpture",
+      "capture_date": "2024-12-28",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Sakai Park and December 28, 2024; time intentionally omitted. Sculpture identified as Pia the Peacekeeper by Thomas Dambo."
+    },
+    {
+      "file": "colorado/steamboat-springs/steamboat-ski-resort-snowy-trees-01.jpeg",
+      "location": "Steamboat Ski Resort, Steamboat Springs, Colorado, USA",
+      "subject": "snow-laden evergreen trees at Steamboat Ski Resort",
+      "capture_date": "2025-02-16",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Steamboat Ski & Resort Co... and February 16, 2025; normalized to Steamboat Ski Resort, Steamboat Springs. Time intentionally omitted."
+    },
+    {
+      "file": "oregon/cannon-beach/haystack-rock-01.jpeg",
+      "location": "Haystack Rock, Cannon Beach, Oregon, USA",
+      "subject": "Haystack Rock and the Needles reflected on Cannon Beach",
+      "capture_date": "2025-03-22",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Arcadia Beach State Recreation Site, but the photographed landmark is Haystack Rock at Cannon Beach; time intentionally omitted."
+    },
+    {
+      "file": "oregon/oswald-west-state-park/oswald-west-forest-stream-01.jpeg",
+      "location": "Oswald West State Park, Oregon, USA",
+      "subject": "forest stream through coastal temperate rainforest",
+      "capture_date": "2025-03-23",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Oswald West State Park and March 23, 2025; exact stream not asserted. Time intentionally omitted."
+    },
+    {
+      "file": "oregon/oswald-west-state-park/oswald-west-coastal-overlook-01.jpeg",
+      "location": "Oswald West State Park, Oregon, USA",
+      "subject": "foggy Pacific coastline from a cliffside overlook",
+      "capture_date": "2025-03-23",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Oswald West State Park and March 23, 2025; time intentionally omitted."
+    },
+    {
+      "file": "oregon/cannon-beach/haystack-rock-sunset-01.jpeg",
+      "location": "Haystack Rock, Cannon Beach, Oregon, USA",
+      "subject": "Haystack Rock and sea stacks at sunset",
+      "capture_date": "2025-03-25",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Cannon Beach and March 25, 2025; time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/bryson-city/lakeview-drive-tunnel-road-to-nowhere-01.jpeg",
+      "location": "Lakeview Drive Tunnel, Great Smoky Mountains National Park, near Bryson City, North Carolina, USA",
+      "subject": "Lakeview Drive Tunnel (Road to Nowhere)",
+      "capture_date": "2025-05-28",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Bryson City and May 28, 2025; image matches the Lakeview Drive Tunnel at the end of Lakeview Drive, commonly associated with the Road to Nowhere. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/bridal-veil-basin-purple-wildflowers-01.jpeg",
+      "location": "Bridal Veil Basin, Telluride, Colorado, USA",
+      "subject": "purple alpine wildflowers in Bridal Veil Basin",
+      "capture_date": "2025-07-08",
+      "date_source": "user-provided Photos screenshot + user location clarification",
+      "notes": "Photos screenshot labels Telluride and July 8, 2025; user clarified the location as Bridal Veil Basin. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/bridal-veil-basin-wildflower-meadow-01.jpeg",
+      "location": "Bridal Veil Basin, Telluride, Colorado, USA",
+      "subject": "summer wildflower meadow and mountain view in Bridal Veil Basin",
+      "capture_date": "2025-07-08",
+      "date_source": "user-provided Photos screenshot + user location clarification",
+      "notes": "Photos screenshot labels Telluride and July 8, 2025; user clarified this photo is also Bridal Veil Basin. Time intentionally omitted."
+    },
+    {
+      "file": "montana/big-sky/beehive-basin-alpine-lake-01.jpeg",
+      "location": "Beehive Basin, Big Sky, Montana, USA",
+      "subject": "alpine lake in Beehive Basin beneath rocky cirque walls",
+      "capture_date": "2025-07-20",
+      "date_source": "user-provided Photos screenshot + user location clarification",
+      "notes": "Photos screenshot labels Big Sky and July 20, 2025; user identified the location as likely Beehive Basin. Official Big Sky and Montana sources describe a high-elevation lake at the end of Beehive Basin Trail, consistent with the scene. Time intentionally omitted."
+    },
+    {
+      "file": "montana/big-sky/ousel-falls-01.jpeg",
+      "location": "Ousel Falls, Big Sky, Montana, USA",
+      "subject": "Ousel Falls, a broad tiered waterfall in forest near Big Sky",
+      "capture_date": "2025-07-22",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Big Sky and July 22, 2025. The broad tiered waterfall matches Ousel Falls, Big Sky's prominent waterfall on the South Fork of the West Fork of the Gallatin River. Time intentionally omitted."
+    },
+    {
+      "file": "iceland/kerid/kerid-crater-lake-01.jpeg",
+      "location": "Kerið Crater, Grímsnes, South Iceland, Iceland",
+      "subject": "turquoise crater lake below red volcanic slopes at Kerið",
+      "capture_date": "2025-08-17",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Grímsnes-og Grafningshreppur and August 17, 2025. The red volcanic crater walls and turquoise lake identify Kerið Crater in the Grímsnes area. Time intentionally omitted."
+    },
+    {
+      "file": "iceland/blaskogabyggd/faxi-waterfall-01.jpeg",
+      "location": "Faxi (Vatnsleysufoss), Bláskógabyggð, South Iceland, Iceland",
+      "subject": "broad curtain of Faxi waterfall on the Tungufljót river",
+      "capture_date": "2025-08-17",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Bláskógabyggð and August 17, 2025. The broad low waterfall matches Faxi, also called Vatnsleysufoss, in Bláskógabyggð. Time intentionally omitted."
+    },
+    {
+      "file": "iceland/rangarthing-eystra/seljalandsfoss-01.jpeg",
+      "location": "Seljalandsfoss, Rangárþing eystra, South Iceland, Iceland",
+      "subject": "Seljalandsfoss plunging over a mossy cliff",
+      "capture_date": "2025-08-18",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Rangárþing eystra and August 18, 2025. The single tall plunge with a walk-behind recess identifies Seljalandsfoss. Time intentionally omitted."
+    },
+    {
+      "file": "iceland/rangarthing-eystra/skogafoss-rainbow-01.jpeg",
+      "location": "Skógafoss, Rangárþing eystra, South Iceland, Iceland",
+      "subject": "Skógafoss with a low rainbow in the spray",
+      "capture_date": "2025-08-19",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Photos screenshot labels Rangárþing eystra and August 19, 2025. The broad rectangular waterfall and characteristic base viewpoint identify Skógafoss. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/telluride-orange-mushroom-01.jpeg",
+      "location": "Telluride, Colorado, USA",
+      "subject": "orange mushroom on forest floor",
+      "capture_date": "2021-07-28",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact mushroom species not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/bald-head-island/bald-head-island-lighthouse-01.jpeg",
+      "location": "Bald Head Island, North Carolina, USA",
+      "subject": "Bald Head Island lighthouse above coastal marsh",
+      "capture_date": "2022-07-16",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "ireland/kerry/ceann-tra-glanfahan/ceann-tra-glanfahan-coast-01.jpeg",
+      "location": "Ceann Trá–Glanfahan, Dingle Peninsula, County Kerry, Ireland",
+      "subject": "Atlantic coastline and sea cliffs",
+      "capture_date": "2018-03-13",
+      "date_source": "user-provided Photos screenshot",
+      "notes": "Location label and capture date supplied by user screenshot; time intentionally omitted."
+    },
+    {
+      "file": "california/big-sur/pfeiffer-beach-keyhole-rock-01.jpeg",
+      "location": "Pfeiffer Beach, Big Sur, California, USA",
+      "subject": "Keyhole Rock and surf at Pfeiffer Beach",
+      "capture_date": "2019-03-12",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/little-hawaii-cascade-01.jpeg",
+      "location": "Little Hawaii, Telluride, Colorado, USA",
+      "subject": "narrow cascade through mossy red-rock gorge at Little Hawaii",
+      "capture_date": "2021-07-16",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/durham/duke-university-duke-chapel-01.jpeg",
+      "location": "Duke University, Durham, North Carolina, USA",
+      "subject": "Duke University Chapel tower",
+      "capture_date": "2023-07-15",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "switzerland/murren/murren-mountain-fog-01.jpeg",
+      "location": "Mürren, Bernese Oberland, Switzerland",
+      "subject": "steep alpine mountain rising into low cloud near Mürren",
+      "capture_date": "2024-06-01",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact peak not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "iceland/flateyri/road-to-flateyri-snow-striped-mountain-01.jpeg",
+      "location": "Road to Flateyri, Westfjords, Iceland",
+      "subject": "snow-striped layered mountain slope along the road to Flateyri",
+      "capture_date": "2025-09-17",
+      "date_source": "user-provided date",
+      "notes": "User described location as somewhere on the road to Flateyri; exact position not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "wyoming/yellowstone/yellowstone-night-sky-01.jpeg",
+      "location": "Yellowstone National Park, Wyoming, USA",
+      "subject": "star-filled night sky viewed through a tent opening",
+      "capture_date": "2025-07-23",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact campsite not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "iceland/akureyri/akureyri-autumn-river-01.jpeg",
+      "location": "Akureyri, North Iceland, Iceland",
+      "subject": "blue-green river bordered by autumn foliage",
+      "capture_date": "2025-09-27",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact river viewpoint not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "iceland/reykjavik/hallgrimskirkja-aurora-01.jpeg",
+      "location": "Hallgrímskirkja, Reykjavík, Iceland",
+      "subject": "Hallgrímskirkja at night beneath the aurora",
+      "capture_date": "2025-11-03",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; landmark identified from the image; time intentionally omitted."
+    },
+    {
+      "file": "iceland/siglufjordur/siglufjordur-winter-harbor-01.jpeg",
+      "location": "Siglufjörður, North Iceland, Iceland",
+      "subject": "snow-covered harbor buildings and mountain reflections in calm water",
+      "capture_date": "2025-11-13",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/akureyri/akureyrarkirkja-01.jpeg",
+      "location": "Akureyri, North Iceland, Iceland",
+      "subject": "Akureyrarkirkja on a cloudy winter day",
+      "capture_date": "2025-11-11",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; church identified from the image; time intentionally omitted."
+    },
+    {
+      "file": "iceland/siglufjordur/siglufjordur-winter-sunset-hut-01.jpeg",
+      "location": "Siglufjörður, North Iceland, Iceland",
+      "subject": "small hilltop hut at winter sunset above snowy fjord mountains",
+      "capture_date": "2025-11-16",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "iceland/siglufjordur/siglufjordur-winter-overlook-signpost-01.jpeg",
+      "capture_date": "2025-11-16",
+      "date_source": "user-provided date",
+      "location": "Siglufjörður, North Iceland, Iceland",
+      "subject": "snowy Siglufjörður and fjord mountains viewed beside a directional signpost",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/little-hawaii-frozen-falls-01.jpeg",
+      "capture_date": "2026-03-19",
+      "date_source": "user-provided date",
+      "location": "Little Hawaii, Telluride, Colorado, USA",
+      "subject": "frozen cascade and icicles at Little Hawaii",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/little-hawaii-frozen-creek-01.jpeg",
+      "capture_date": "2026-03-19",
+      "date_source": "user-provided date",
+      "location": "Little Hawaii, Telluride, Colorado, USA",
+      "subject": "creek flowing through a snowy canyon beside frozen falls",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "washington/darrington/darrington-mountain-view-01.jpeg",
+      "capture_date": "2026-05-03",
+      "date_source": "user-provided date",
+      "location": "Darrington, Washington, USA",
+      "subject": "snow-streaked mountain rising above Darrington",
+      "notes": "Location and date supplied by user; exact peak not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "washington/index/index-mountain-forest-01.jpeg",
+      "capture_date": "2026-05-04",
+      "date_source": "user-provided date",
+      "location": "Index, Washington, USA",
+      "subject": "rugged snow-streaked mountain above dense spring forest",
+      "notes": "Location and date supplied by user; exact peak not confirmed; time intentionally omitted."
+    },
+    {
+      "file": "colorado/diamond-lake-indian-peaks/upper-diamond-lake-marmot-01.jpeg",
+      "capture_date": "2026-06-11",
+      "date_source": "user-provided date",
+      "location": "Upper Diamond Lake, Indian Peaks Wilderness, Colorado, USA",
+      "subject": "marmot among lichen-covered alpine rocks near Upper Diamond Lake",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/bryson-city/waterfall-near-bryson-city-01.jpeg",
+      "location": "Near Bryson City, North Carolina, USA",
+      "subject": "woodland waterfall near Bryson City",
+      "capture_date": "2025-07-21",
+      "date_source": "user-provided date",
+      "notes": "User supplied “somewhere outside Bryson City, NC”; exact waterfall not identified. Time intentionally omitted."
+    },
+    {
+      "file": "north-carolina/fontana-lake/fontana-lake-railroad-bridge-02.jpeg",
+      "location": "Fontana Lake, North Carolina, USA",
+      "subject": "railroad bridge across Fontana Lake viewed from the water",
+      "capture_date": "2025-07-25",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; exact bridge name not confirmed. Time intentionally omitted."
+    },
+    {
+      "file": "colorado/telluride/telluride-winter-mountains-01.jpeg",
+      "location": "Telluride, Colorado, USA",
+      "subject": "snow-covered mountains near Telluride",
+      "capture_date": "2022-12-29",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user."
+    },
+    {
+      "file": "colorado/boulder/boulder-flatirons-winter-01.jpeg",
+      "location": "Boulder, Colorado, USA",
+      "subject": "snow-covered Flatirons above Boulder",
+      "capture_date": "2026-01-09",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user."
+    },
+    {
+      "file": "switzerland/lauterbrunnen/staubbach-falls-cow-01.jpeg",
+      "location": "Staubbach Falls, Lauterbrunnen, Bernese Oberland, Switzerland",
+      "subject": "cow grazing in the Lauterbrunnen Valley with Staubbach Falls behind it",
+      "capture_date": "2024-06-01",
+      "date_source": "user-provided date matching the Lauterbrunnen photo",
+      "notes": "User specified that this photo has the same date as the Lauterbrunnen photo. Landmark identified visually as Staubbach Falls; time intentionally omitted."
+    },
+    {
+      "file": "colorado/nederland/nederland-autumn-aspens-rocks-01.jpeg",
+      "location": "Nederland, Colorado, USA",
+      "subject": "autumn aspens and rock outcrop",
+      "capture_date": "2025-09-29",
+      "date_source": "user-provided date",
+      "notes": "Location and date supplied by user; time intentionally omitted."
+    }
+  ]
+}

@@ -74,9 +74,8 @@ def catalogue(name,kind):
   html+='</div></div></div></dialog>'
  write(name+'.html',html+foot())
 for name,kind in [('bookshelf','books'),('films','films'),('records','records')]:catalogue(name,kind)
-for name,title,drawing,parent in [('places','places','places','archive')]:
- back='writings.html' if parent=='writings' else 'index.html#archive' if parent=='archive' else 'index.html'
- write(name+'.html',head(title)+f'<main id="main"><div class="page-heading"><a class="back" href="{back}">← {parent}</a><h1>{title}</h1></div><div class="quiet-page places-page">{art(drawing)}<p class="place-note">A place for places.<br><em>More to come.</em></p></div></main>'+foot())
+from build_places import main as build_places
+build_places()
 from build_writings import build_writings
 build_writings(ROOT, head, foot, write)
 write('writings.html', '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=index.html#writings"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="index.html#writings"><title>writings — the basin</title></head><body><a href="index.html#writings">Continue to writings</a></body></html>')
