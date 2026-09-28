@@ -453,18 +453,14 @@ html.still { scroll-behavior:auto; }
  .desiring-factory .closing-quote .poem { font-size:18px; }
 }
 @media(max-width:550px) { .basin-body { row-gap:48px; } }
-/* Brief, warm couplings: a current passes between two figures, then dissolves. */
 .coupling-layer { pointer-events:none; }
-.coupling-halo { fill:#b8833d; opacity:.2; filter:blur(8px); }
-.coupling-thread { fill:none; stroke:#a66b35; stroke-width:1.1; stroke-linecap:round; }
-.coupling-over { stroke:#75816b; stroke-width:.65; opacity:.7; }
-.coupling-port { fill:var(--paper); stroke:#ad793e; stroke-width:1; }
-.coupling-pulse { fill:#dca45c; stroke:#a96c30; stroke-width:.7; filter:drop-shadow(0 0 3px #cf974d); }
-.coupling-bloom { fill:none; stroke:#a67b46; stroke-width:.7; opacity:.6; }
-.desiring-factory .travelling-figure.is-coupled { filter:drop-shadow(0 0 4px rgb(188 120 42 / var(--coupling-glow,0))); }
+.desiring-factory .travelling-figure.is-coupled { filter:none; }
 /* Moving chains transmit material beyond the factory drawing. */
 .machine-current { fill:none; stroke-width:1.2; opacity:.5; stroke-linecap:round; }
-.stream-packet { filter:drop-shadow(0 0 3px #bd854e); }
+.stream-packet { stroke:#d6b78c; stroke-width:.8; }
 .flight-thread { fill:none; stroke-width:.7; opacity:.15; }
 .flight-tail { fill:none; stroke-width:1.4; stroke-linecap:round; opacity:.75; }
 @media(max-width:550px) { .desiring-factory .figure-network { overflow:visible; } }
+.basin-recombinations { pointer-events:none; mix-blend-mode:multiply; }
+.return-current .flight-thread { stroke-dasharray:8 5 2 5; }
+.desiring-factory .factory-door { filter:drop-shadow(0 0 12px rgb(181 119 48 / var(--factory-return,0))); }
